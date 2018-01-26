@@ -6,7 +6,7 @@
  * La forma GRB está formada por 3 particiones 255,255,255 
  * La primera particiones aumentará hasta 255, una vez que llegue a ese punto la segunda partición aumentará a 255
  * y por último la tercera partición aumentará hasta 255.
- * 															COLOR: (82,24,146)
+ * 															
  * Mientras la tercera sube, la primera disminuirá hasta 0 y una vez eso, la segunda también al tiempo que la primer sube también.
  *
  * ALGORITHM
@@ -21,16 +21,16 @@ var turn = 0;
 
 
 var body = document.getElementsByTagName('body')[0];
-body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 
-function paintFade() {
+function algorithm() {
 
 	switch(turn){
 		case(0):
 			if (red >= 0 & red != 255) {
 				red = red + 1;
-				body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+				body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 				if (turn == 0 & red == 255) {
 					turn = 1;
@@ -41,7 +41,7 @@ function paintFade() {
 		case(1):
 			if (green >= 0 & green != 255) {
 				green = green + 1;
-				body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+				body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 				if (turn == 1 & green == 255) {
 					turn = 2;
@@ -52,7 +52,7 @@ function paintFade() {
 		case(2):
 			if (blue >= 0 & blue != 255) {
 				blue = blue + 1;
-				body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+				body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 				if (turn == 2 & blue == 255) {
 					turn = 3;
@@ -64,7 +64,7 @@ function paintFade() {
 
 		case(3):
 			red = red - 1;
-			body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+			body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 			if (turn == 3 & red == 0) {
 				turn = 4;
@@ -74,7 +74,7 @@ function paintFade() {
 
 		case(4):
 			green = green - 1;
-			body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+			body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 			if (turn == 4 & green == 0) {
 				turn = 5;
@@ -84,7 +84,7 @@ function paintFade() {
 
 		case(5):
 			blue = blue - 1;
-			body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
+			body.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 			if (turn == 5 & blue == 5) {
 				turn = 0;
@@ -94,4 +94,8 @@ function paintFade() {
 	}
 }
 
-setInterval("paintFade()", 10);
+function paintFade(time) {
+	setInterval("algorithm()", time);
+}
+
+paintFade();
