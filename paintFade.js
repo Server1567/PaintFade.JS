@@ -20,7 +20,7 @@ var blue = 0;
 var turn = 0;
 
 
-var body = document.getElementById("body");
+var body = document.getElementsByTagName('body')[0];
 body.style.backgroundColor = "rgba("+red+", "+green+", "+blue+", .75)";
 
 
