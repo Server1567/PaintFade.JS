@@ -152,5 +152,3 @@ function algorithm() {
 function paintFade(time) {
 	setInterval("algorithm()", time);
 }
-
-paintFade();
