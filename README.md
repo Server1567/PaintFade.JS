@@ -1,4 +1,4 @@
-# PaintFade.JS
+# PaintFade.JS v0.1-alpha
 
 <img src="https://github.com/Server1567/PaintFade.JS/blob/master/logo.png" />
 
