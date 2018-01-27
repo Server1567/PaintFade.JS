@@ -8,7 +8,8 @@ PaintFade.JS es una librería JavaScript que aplica un toque de background aleat
 
 <ol>
 	<li>Solo se necesita insertar el archivo <strong>paintFade.js</strong></li>
-	<li>Llamar la función: `<?php echo "Hola Mundo"; ?>`</li>
+	<li>Llamar la función:</li>
+	`paintFade(time);`
 	<li>El parámetro <strong>time</strong> tiene como valor un entero que expecifíca el tiempo en milisegundos de cambio de colores</li>
 </ol>
 
