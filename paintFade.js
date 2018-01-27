@@ -7,8 +7,8 @@
  * y por último la tercera partición aumentará hasta 255. 															
  * Mientras la tercera sube, la primera disminuirá hasta 0 y una vez eso, la segunda también al tiempo que la primer sube también.
  *
- * ALGORITHM
- * 1 - Aplicar un orden al switcher entre 0,1,2,3,4,5
+ * THINGS FOR APPLY
+ * 1 - Aplicar un orden al switcher entre 0,1,2,3,4,5,6,7,8,9,10,11
  * 2 - Crear una función para el degradado
  * 
 */
